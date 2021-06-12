@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import 'variables';
+@import 'nav';
+@import 'hero';
+@import 'aboutus';
+@import 'featured';
+@import 'reviews';
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding-top: 10rem;
+}
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.project-container {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+.header {
+  max-width: 1920px;
+
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}

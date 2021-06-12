@@ -1,0 +1,152 @@
+.header {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  height: 10vh;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  z-index: 999;
+  transition: all 0.3s;
+
+}
+.nav {
+  font-size: 1.4rem;
+  height: 10vh;
+  padding: 0 2rem;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--dark-1);
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &__item {
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    border-right: 0.1px solid rgba(211, 211, 211, 0.7);
+
+    &:hover:not(.order) {
+      color: var(--primary-color);
+      cursor: pointer;
+      
+    }
+    & a {
+      padding: 1rem 2rem;
+      background-color: var(--primary-color);
+      color: #fff;
+      border-radius: 5px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+  &__menu {
+    display: none;   
+  }
+  &__menu-line {
+    
+    width: 3rem;
+    height: 3px;
+    margin: 3px 0;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .header {
+    position: relative;
+  }
+  .nav {
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    &__links {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      width: 50vw;
+      position: fixed;
+      top: 0;
+      left: -50vw;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.8);
+
+      z-index: 999;
+      transition: all 0.3s;
+
+      &.active {
+        left: 0;
+      }
+
+
+    }
+    &__item {
+      display: flex;
+      align-self: stretch;
+      color: #fff;
+      margin-bottom: 1rem;
+      padding: 2rem 5rem;
+      transition: all 0.3s;
+      border-right: none;
+
+      &:hover {
+        border-left: 5px solid var(--primary-color);
+      }
+    }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      &-line {
+        transform-origin: 8.5px 1.5px;
+      }
+      .line1 {
+        
+        transition: all 0.3s;
+      }
+      &.rotate .line1 {
+        transform: rotate(45deg);
+      }
+
+      .line2 {
+        transition: all 0.3s;
+      }
+      &.rotate .line2 {
+        display: none;
+        opacity: 0;
+      }
+
+      .line3 {
+        transition: all 0.3s;
+      }
+      &.rotate .line3 {
+        transform: rotate(-45deg);
+      }
+
+    }
+  }
+}

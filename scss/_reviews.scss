@@ -1,0 +1,112 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.reviews {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/rv-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+  }
+
+  &__title {
+    h4 {
+      position: relative;
+      color: var(--primary-color);
+      font-size: 2rem;
+      text-align: center;
+      width: 30rem;
+      margin: 0 auto;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 1.5rem;
+        left: 0;
+        width: 5rem;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        top: 1.5rem;
+        right: 0;
+        width: 5rem;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5rem;
+  }
+  &__img {
+    width: 50px;
+    height: 50px;
+    
+    img {
+      border-radius: 50%;
+      background-position: bottom;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    color: var(--dark-1);
+    padding: 1rem 0;
+  }
+  &__text {
+    font-size: 1.5rem;
+    color: var(--dark-2);
+  }
+}
